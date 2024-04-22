@@ -126,7 +126,7 @@ def get_test_result_files(root: str) -> Dict[str, DataFrame]:
 
 
 def get_verification(filename: str):
-    with open(filename, "r") as verFile:
+    with open(filename, "r", encoding="utf8") as verFile:
         for line in verFile:
             if line.startswith("   PASS for"):
                 return True
